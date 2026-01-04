@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Tournament Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#tournaments">Tournaments</a></li>
+                <li><a href="#leaderboard">Leaderboard</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Dominate the Battlegrounds</h1>
+                <p>Enter the most intense Free Fire tournaments, compete with legends, and claim your victory!</p>
+
+                <button class="cta-btn register-btn" onclick="scrollToRegister()">Register Now</button>
+                <button class="cta-btn secondary-btn" onclick="scrollToTournaments()">Tournament Matches</button>
+            </div>
+            <div class="hero-visual">
+                <!-- Animated Free Fire visuals -->
+                <div class="floating-elements">
+                    <div class="floating-icon icon-1">🔥</div>
+                    <div class="floating-icon icon-2">🏆</div>
+                    <div class="floating-icon icon-3">⚔️</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tournaments" class="tournaments">
+            <h2>Upcoming Tournaments</h2>
+            <div class="tournament-cards">
+                <!-- Tournament cards will be populated by JS -->
+            </div>
+        </section>
+
+        <section id="leaderboard" class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table id="leaderboard-table">
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Player</th>
+                        <th>Kills</th>
+                        <th>WON</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Leaderboard data will be populated by JS -->
+                </tbody>
+            </table>
+        </section>
+
+        <section id="register" class="register">
+            <h2>Register for Tournament</h2>
+            <form id="registration-form">
+                <input type="text" name="name" id="name" placeholder="Player Name" required>
+                <input type="text" name="player-id" id="player-id" placeholder="Player ID" required>
+                <input type="text" name="team-name" id="team-name" placeholder="Team Name" required>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+                <input type="tel" name="phone" id="phone" placeholder="Phone" required>
+                <button type="submit">Register</button>
+            </form>
+            <div id="form-errors"></div>
+        </section>
+
+        <section id="rules" class="rules">
+            <h2>Tournament Rules</h2>
+            <div class="rules-content">
+                <div class="rule-item">
+                    <h3>1. Fair Play</h3>
+                    <p>All participants must adhere to fair play principles. Cheating, hacking, or any form of unfair advantage is strictly prohibited.</p>
+                </div>
+                <div class="rule-item">
+                    <h3>2. Registration</h3>
+                    <p>Players must register with accurate information. False information may lead to disqualification.</p>
+                </div>
+                <div class="rule-item">
+                    <h3>3. Match Conduct</h3>
+                    <p>Respect all players and officials. Toxic behavior, harassment, or unsportsmanlike conduct will result in penalties.</p>
+                </div>
+                <div class="rule-item">
+                    <h3>4. Technical Requirements</h3>
+                    <p>Ensure stable internet connection and compatible device. Technical issues do not excuse rule violations.</p>
+                </div>
+                <div class="rule-item">
+                    <h3>5. Prize Distribution</h3>
+                    <p>Prizes will be distributed within 7 days after the tournament ends. Winners must provide valid payment details.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact & Support</h2>
+            <form id="contact-form">
+                <input type="text" name="name" id="contact-name" placeholder="Name" required>
+                <input type="tel" name="phone" id="contact-phone" placeholder="Phone Number" required>
+                <textarea name="message" id="message" placeholder="Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <div class="faq">
+                <h3>FAQ</h3>
+                <details>
+                    <summary>How to register?</summary>
+                    <p>Fill out the registration form above.</p>
+                </details>
+                <details>
+                    <summary>What are the entry fees?</summary>
+                    <p>Entry fees vary by tournament. Check the tournament details for specific amounts.</p>
+                </details>
+                <details>
+                    <summary>How are winners determined?</summary>
+                    <p>Winners are based on kills, placement, and overall performance as per tournament rules.</p>
+                </details>
+                <!-- More FAQs -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Free Fire Tournament Hub. All rights reserved.</p>
+        <p>Created by Rajeeb and Kailash</p>
+    </footer>
+
+    <div id="notification-popup" class="popup">
+        <p id="popup-message"></p>
+        <button id="close-popup">Close</button>
+    </div>
+
+    <audio id="background-music" loop autoplay muted>
+        <source src="https://www.soundjay.com/misc/sounds/bell-ringing-05.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <audio id="send-sound">
+        <source src="https://www.soundjay.com/misc/sounds/success.wav" type="audio/wav">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js"></script>
+        </div>
+    </div>
+</body>
+</html>
