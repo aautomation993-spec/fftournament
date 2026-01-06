@@ -5,7 +5,8 @@ document.getElementById('registrationForm').addEventListener('submit', async (e)
   const phone = document.getElementById('phone').value;
 
   try {
-    const response = await fetch('http://localhost:3000/register', {
+    const response = await fetch('const API_BASE = "https://fftournament-9b77.onrender.com";
+/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -18,7 +19,8 @@ document.getElementById('registrationForm').addEventListener('submit', async (e)
     // Poll for status
     const pollStatus = async () => {
       try {
-        const statusResponse = await fetch('http://localhost:3000/status');
+        const statusResponse = await fetch('const API_BASE = "https://fftournament-9b77.onrender.com";
+/status');
         const statusData = await statusResponse.json();
         if (statusData.message) {
           document.getElementById('message').textContent = statusData.message;
@@ -41,7 +43,8 @@ document.getElementById('registrationForm').addEventListener('submit', async (e)
   const phone = document.getElementById('phone').value;
 
   try {
-    const response = await fetch('http://localhost:3000/register', {
+    const response = await fetch('const API_BASE = "https://fftournament-9b77.onrender.com";
+', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -54,7 +57,8 @@ document.getElementById('registrationForm').addEventListener('submit', async (e)
     // Poll for status
     const pollStatus = async () => {
       try {
-        const statusResponse = await fetch('http://localhost:3000/status');
+        const statusResponse = await fetch('const API_BASE = "https://fftournament-9b77.onrender.com";
+');
         const statusData = await statusResponse.json();
         if (statusData.message) {
           document.getElementById('message').textContent = statusData.message;
