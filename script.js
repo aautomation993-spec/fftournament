@@ -5,7 +5,7 @@ document.getElementById('registrationForm').addEventListener('submit', async (e)
   const phone = document.getElementById('phone').value;
 
   try {
-    const response = await fetch('http://localhost:3000/register', {
+    const response = await fetch('https://fftournament-production.up.railway.app/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -18,7 +18,7 @@ document.getElementById('registrationForm').addEventListener('submit', async (e)
     // Poll for status
     const pollStatus = async () => {
       try {
-        const statusResponse = await fetch('http://localhost:3000/status');
+        const statusResponse = await fetch('https://fftournament-production.up.railway.app/status');
         const statusData = await statusResponse.json();
         if (statusData.message) {
           document.getElementById('message').textContent = statusData.message;
